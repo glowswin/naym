@@ -1,0 +1,8 @@
+.cmr {
+  float: left;
+  margin-right: 40px;
+}
+div#myStream {
+  clear: both;
+  overflow: hidden;
+}

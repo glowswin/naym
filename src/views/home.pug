@@ -1,29 +1,34 @@
 doctype html
-html(lang="ko")
+html(lang="en")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title 놈
+        title Noom
         link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+        link(rel="stylesheet", href="/public/css/style.css")
     body
         header
-            h1 놈
+            h1 냠
         main
             div#welcome
-                form
-                    input(placeholder="채팅방을 입력해주세요.", required, type="text")
+                form    
+                    input(placeholder="방들어가기", required, type="text")
                     button 방들어가기
-                h4 개설된 채팅방:
-                ul
-            div#room
-                h3
-                form#nick
-                    input(placeholder="별명변경", required, type="text")
-                    button 수정                
-                ul
-                form#msg
-                    input(placeholder="보낼메시지", required, type="text")
+            div#call
+                div#myStream
+                    div.cmr
+                        video#myFace(autoplay,playsinline, width="400", height="400")
+                        div.bttn
+                            button.btn#mute 소리끄기
+                            button.btn#camera 카메라 끄기
+                            select#cameras
+                    div.cmr
+                        video#peerFace(autoplay,playsinline, width="400", height="400")
+
+                div#chattt
+                    ul
+                    input(placeholder="내용을 입력하세요.", required, type="text")
                     button 보내기
         script(src="/socket.io/socket.io.js") 
         script(src="/public/js/app.js") 
